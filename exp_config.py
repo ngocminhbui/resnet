@@ -32,5 +32,5 @@ tf.app.flags.DEFINE_integer('min_queue_examples', 20000, 'min after dequeue')
 tf.app.flags.DEFINE_string('pretrained_model', './model/ResNet-L50.npy', "Path of resnet pretrained model")
 
 
-tf.app.flags.DEFINE_string('mean_rgb', './models/rgb_mean_BGR.npy', 'mean color image')
-tf.app.flags.DEFINE_string('mean_dep', './models/dep_mean_BGR.npy', 'mean depth image')
+tf.app.flags.DEFINE_string('mean_rgb', './model/rgb_mean_BGR.npy', 'mean color image')
+tf.app.flags.DEFINE_string('mean_dep', './model/dep_mean_BGR.npy', 'mean depth image')
