@@ -1,0 +1,5 @@
+log/*
+lists/*
+model/*
+*.pyc
+*.npy
