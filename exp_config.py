@@ -2,6 +2,9 @@ import tensorflow as tf
 
 FLAGS = tf.app.flags.FLAGS
 
+tf.app.flags.DEFINE_string('mode', 'depth', 'train mode channel')
+#tf.app.flags.DEFINE_string('mode', 'rgb', 'train mode channel')
+
 
 tf.app.flags.DEFINE_string('train_lst', './lists/train_mini_1.lst', 'training list')
 tf.app.flags.DEFINE_string('eval_lst', './lists/eval_mini_1.lst', 'validation list')
@@ -28,3 +31,6 @@ tf.app.flags.DEFINE_integer('min_queue_examples', 20000, 'min after dequeue')
 
 tf.app.flags.DEFINE_string('pretrained_model', './model/ResNet-L50.npy', "Path of resnet pretrained model")
 
+
+tf.app.flags.DEFINE_string('mean_rgb', './models/rgb_mean_BGR.npy', 'mean color image')
+tf.app.flags.DEFINE_string('mean_dep', './models/dep_mean_BGR.npy', 'mean depth image')

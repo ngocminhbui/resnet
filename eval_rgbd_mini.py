@@ -4,7 +4,7 @@ import tensorflow as tf
 import os
 from datetime import datetime
 from exp_config import *
-from train_rgbd_mini import distorted_inputs
+from input import inputs
 
 FLAGS = tf.app.flags.FLAGS
 
@@ -101,7 +101,7 @@ def main(_):
     NUM_EXAMPLES = len(open(FLAGS.eval_lst, 'r').read().splitlines())
 
 
-    images, labels = distorted_inputs(FLAGS.data_dir, FLAGS.eval_lst)
+    images, labels = input(FLAGS.data_dir, FLAGS.eval_lst)
 
     is_training = tf.placeholder('bool', [], name='is_training')  # placeholder for the fusion part
 
